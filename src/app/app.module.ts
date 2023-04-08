@@ -13,7 +13,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchPipe } from './pipes/search.pipe';
 import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { DealsComponent } from './deals/deals.component';
 import { HeaderComponent } from './header/header.component';
 @NgModule({
   declarations: [
@@ -22,7 +21,6 @@ import { HeaderComponent } from './header/header.component';
     CardComponent,
     DragDropComponent,
     SearchPipe,
-    DealsComponent,
     HeaderComponent,
   ],
   imports: [
