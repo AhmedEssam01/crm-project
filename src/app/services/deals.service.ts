@@ -20,4 +20,9 @@ export class DealsService {
       }
       return this.http.put(`${this.apiURLADSs}/${data.id}`,update)
     }
+
+    deleteDeals(id:number){
+      return this.http.delete(`${this.apiURLADSs}/${id}`)
+    }
+
 } 

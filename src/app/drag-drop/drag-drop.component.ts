@@ -58,6 +58,7 @@ export class DragDropComponent implements OnInit {
   }
   
   private _updateDeals(data:any,value:string){
+    console.log(value)
     this.DealsService.updateDeals(data,value).subscribe((res:any)=>{
       data.status =res.status
       // this.contact.push(data)
@@ -67,10 +68,11 @@ export class DragDropComponent implements OnInit {
     const index = event.currentIndex
     var data = '';
     setTimeout(() => {
-      console.log(event.container.data[index])
+      console.log(event)
       data = event.container.data[index]
       this._updateDeals(data,value)
     }, 10);
+
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
     } else {

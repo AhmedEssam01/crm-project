@@ -3,7 +3,7 @@
         <h5 class="card-title">{{items.first_name+' '+items.last_name}}</h5>
         <button class="btn" style="background-color: lightgrey;">{{items.state}}</button>
         <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-title="probability status 100%.">
+            title="probability status  {{items.probability_status}}">
             {{items.probability_status}}
         </button>
         <div class="details">
@@ -13,6 +13,7 @@
             <i class="fa-solid fa-at"><span>{{items.email}}</span></i>
             <br>
             <i class="fa-regular fa-calendar"><span>{{items.date}}</span></i>
+            <i class="fa-solid fa-at" (click)="delete(items.id)"><span>{{items.id}}</span></i>
         </div>
     </div>
 </div>
